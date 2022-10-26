@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp9
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //declarar variables
+            int num;
+            //entrada
+            Console.WriteLine("ejemplo 3.2-uso de if");
+            Console.WriteLine("programa para saber si el numero es positivo o negativo");
+            Console.WriteLine("inserta un  un numero");
+            num = int.Parse(Console.ReadLine());
+
+            //proceso de comparacion
+            if (num == 0)
+                Console.WriteLine("el numero es neutro");
+            if (num > 0)
+                Console.WriteLine("el numero es positivo");
+            if (num < 0)
+                Console.WriteLine("el numero es negativo");
+            Console.ReadKey();
+        }
+    }
+}
