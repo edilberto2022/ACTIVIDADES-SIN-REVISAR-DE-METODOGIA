@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace ConsoleApp10
+    {
+        class Program
+        {
+            static void Main(string[] args)
+            {
+                //definir variables
+                int x,total;
+                //entrada
+                Console.WriteLine("ejemplo 3.3-uso del if");
+                Console.WriteLine("cuando se debe pagar por x cantidad de lapiceros");
+                Console.WriteLine("insertar la cantidad de lapices que se va a comprar");
+                x = int.Parse(Console.ReadLine());
+
+            //proceso de comparacion
+            if (x >= 1000)
+            {
+                Console.WriteLine("el costo es de: " + 85);
+                total = x * 85;
+                Console.WriteLine("el total a pagar es: " + total);
+            }
+            if (x < 1000)
+            {
+                Console.WriteLine("el costo es de: " + 90);
+                total = x * 90;
+                Console.WriteLine("el total a pagar es: " + total);
+            }
+                Console.ReadKey();
+
+            }
+        }
+    }
