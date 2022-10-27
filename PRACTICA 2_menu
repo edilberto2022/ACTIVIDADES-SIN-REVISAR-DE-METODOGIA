@@ -1,0 +1,50 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace practica_2_2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //definir variables
+            char letra;
+            
+        //datos de entrada
+            Console.WriteLine("menu");
+            Console.WriteLine("ingresa una letra");
+        letra = char.Parse(Console.ReadLine());
+            
+            //proceso y salida
+            if (letra=='e')
+        {
+            Console.WriteLine("edilberto");
+        }
+        if(letra == 'E')
+        {
+            Console.WriteLine("EDILBERTO");
+        }
+        if(letra == 'h')
+        {
+            Console.WriteLine("hernandez");
+        }
+        if(letra == 'H')
+        {
+            Console.WriteLine("HERNANDEZ");
+        }
+        if(letra == 'r')
+        {
+            Console.WriteLine("ramirez");
+        }
+         if(letra == 'R')
+        {
+            Console.WriteLine("RAMIREZ");
+        }
+
+        Console.ReadKey();
+        }
+    }
+}
