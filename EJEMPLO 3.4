@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication13
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //definir variable
+            double num, de, pf;
+
+            //entrada
+            Console.WriteLine("ejemplo 3.3-uso del if");
+            Console.WriteLine("econtrar el precio final con el descuento incluido");
+            Console.WriteLine("escribir el costo del traje");
+            num = double.Parse(Console.ReadLine());
+
+
+            //proceso de comparacion
+            if (num > 2500)
+            {
+                de = num * 0.15;
+                Console.WriteLine("el descuento es: " + de);
+                pf = num - de;
+                Console.WriteLine("el precio final es: " + pf);
+            }
+            else
+                if(num<=2500)
+
+            {
+                de = num * 0.08;
+                Console.WriteLine("el descuento es: " + de);
+                pf = num - de;
+                Console.WriteLine("el preio final es: " + pf);
+
+            }
+            Console.ReadKey();
+
+        }
+    }
+}
