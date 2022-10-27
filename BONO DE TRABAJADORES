@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp23
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double añost,bono;
+            //entrada
+            Console.WriteLine("bonos asignados por los años trabajados");
+            Console.WriteLine("insertar los años que lleva trabajando el empleado");
+            añost = double.Parse(Console.ReadLine());
+
+            //comparacion y proceso
+            if (añost == 1)
+            {
+                bono = 100;
+                Console.WriteLine("el bono que recibira es: " + bono);
+            }
+            else
+                if(añost>=2 && añost<=5)
+            {
+                bono = 200;
+                Console.WriteLine("el bono que recibira es: " + bono);
+            }
+            else
+                if(añost>5)
+            {
+                bono = 1000;
+                Console.WriteLine("el bono que recibira es: " + bono);
+            }
+            Console.ReadKey();
+
+        }
+    }
+}
