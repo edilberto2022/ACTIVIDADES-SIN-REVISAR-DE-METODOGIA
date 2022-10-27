@@ -1,0 +1,42 @@
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace edilberto
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //definir variable
+            int a, b, c;
+            //entrada
+            Console.WriteLine("ejemplo 3.5-uso de if");
+            Console.WriteLine("programa para determinar cual de los tres valores proporcionadas es la mayor");
+            Console.WriteLine("insertar valor a");
+            a = int.Parse(Console.ReadLine());
+            Console.WriteLine("insertar valor b");
+            b = int.Parse(Console.ReadLine());
+            Console.WriteLine("insertar valor c");
+            c = int.Parse(Console.ReadLine());
+            //comparacion
+            if (a > b)
+                if(a>c)
+                    Console.WriteLine("el valor mayor es: " + a)
+            else if (c>b)
+                    Console.WriteLine("el valor mayor es: " + c);
+                else
+                    Console.WriteLine("el valor mayor es: " + b);
+            else if (b>c)
+                Console.WriteLine("el valor mayor es: " + b);
+            else
+                Console.WriteLine("el valor mayor es: " + c);
+            Console.ReadKey();
+       
+        }
+    }
+}
