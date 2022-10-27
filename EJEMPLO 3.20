@@ -1,0 +1,99 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+using System.Threading.Tasks;
+
+namespace edilberto
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //definir variables
+            int n = 0, modelo, talla = 0;
+            double costo = 0, total, manodeobra, tela;
+            //entrada
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("****FABRICALA DE PANTALONES****");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("   Insertar el modelo   ");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write("  1-A");
+            Console.WriteLine("      2-B");
+            modelo = int.Parse(Console.ReadLine());
+
+            if (modelo == 1 || modelo == 2)
+            {
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine(" Ingresa el numero de pantalones a fabricar");
+                n = int.Parse(Console.ReadLine());
+                Console.WriteLine(" Ingresa el costo por metro de tela");
+                costo = int.Parse(Console.ReadLine());
+
+            }
+            if (modelo == 1)
+            {
+                tela = (costo* 1.5);
+                manodeobra = (tela* .80);
+            }
+            else
+
+            {
+                tela = (costo* 1.8);
+                manodeobra = (tela*.95);
+            }
+            total = tela + manodeobra;
+
+            
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("   Insertar la talla");
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.Write("1-30");
+                Console.Write("     2-32");
+                Console.WriteLine("      3-36");
+           talla = int.Parse(Console.ReadLine());
+
+            if (talla==1 || talla==2 || talla == 3)
+                Console.ForegroundColor = ConsoleColor.White;
+            Console.ReadKey();
+            if (talla >= 1 && talla <= 3)
+                if (talla == 2 || talla == 3)
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine(" se aplico un 4% extra por la talla $" + total * .04);
+                }
+
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine(" El gasto por tela de 1 pantalon es:$" + tela);
+                Console.WriteLine(" El gasto por mano de obra de 1 pantalon es:$" + manodeobra);
+                Console.WriteLine(" Cargo extra del 30% de ganancia $" + total * .30);
+                total = total + (total * .30);
+                Console.WriteLine(" El precio final de venta de 1 pantalon $" + total);
+                Console.WriteLine();
+                Console.WriteLine(" El gasto en tela por pantalones es :$" + tela * n);
+                Console.WriteLine(" El gato por mano de obra es pantalones es:$" + manodeobra * n);
+                Console.WriteLine(" El total por la venta de  pantalones es:$" + total * n);
+                Console.WriteLine(" La ganancia neta por pantalones es:$" + ((total - (tela + manodeobra)) * n));
+            }
+            if (talla <= 0)
+            {
+                Console.ForegroundColor = ConsoleColor.Gray;
+                Console.WriteLine(" Ingresa una talla correcta");
+
+
+            }
+            else
+            if (modelo <= 0)
+            {
+                Console.WriteLine(" Ingresa un modelo correcto");
+            }
+
+
+            Console.ReadKey();
+            
+        }
+    }
+}
